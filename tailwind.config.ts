@@ -20,7 +20,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
-        primary: "#161616",
+        primary: "#00ff00",
         secondary: "#393939",
         muted: {
           DEFAULT: "hsl(var(--muted))",

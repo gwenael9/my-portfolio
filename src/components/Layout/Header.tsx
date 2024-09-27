@@ -24,12 +24,12 @@ export default function Header() {
 
   const getBgColor = (item: string) => {
     if (item === router.pathname) {
-      return "bgVert"
+      return "bgVert";
     }
   }
 
   return (
-    <nav className="fixed flex justify-between overflow-hidden top-0 w-full left-0 pb-0 pt-[4rem] px-[10rem] text-white">
+    <nav className="fixed flex justify-between overflow-hidden top-0 w-full left-0 pb-0 pt-[4rem] px-[10rem]">
       <div>
         {/* ajouter un logo + personnel */}
         <Cat />

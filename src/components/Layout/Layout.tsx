@@ -24,7 +24,11 @@ export default function Layout({ children, title }: LayoutProps) {
         />
       </Head>
       <Header />
-      <main className="px-40 m-auto max-w-[144rem]">{children}</main>
+      <main
+        className="px-40 max-w-[144rem] m-auto"
+      >
+        {children}
+      </main>
     </>
   );
 }

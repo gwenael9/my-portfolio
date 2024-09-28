@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Cat } from "lucide-react";
 import { useRouter } from "next/router";
+import { getUpOne } from "@/utils/function";
 
 export default function Header() {
 
@@ -12,16 +13,6 @@ export default function Header() {
     { name: "contact", link: "/contact" },
   ];
 
-  // mettre en majuscule la 1ere lettre
-  const getUpOne = (str: string) => {
-    return str
-      .split(" ")
-      .map((word) => {
-        return word.charAt(0).toLocaleUpperCase() + word.slice(1);
-      })
-      .join(" ");
-  };
-
   const getBgColor = (item: string) => {
     if (item === router.pathname) {
       return "bgVert";
@@ -29,7 +20,7 @@ export default function Header() {
   }
 
   return (
-    <nav className="fixed flex justify-between items-center overflow-hidden top-0 w-full left-0 pb-0 pt-12 sm:pt-16 px-20 sm:px-40">
+    <nav className="fixed flex justify-between items-center overflow-hidden top-0 w-full left-0 pb-0 pt-12 sm:pt-16 px-10 sm:px-40">
       <div>
         {/* ajouter un logo + personnel */}
         <Cat />

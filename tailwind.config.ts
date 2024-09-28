@@ -46,27 +46,29 @@ const config: Config = {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        card: "1.6rem",
+        lg: "0.5rem",
+        md: "0.375rem",
+        sm: "0.25rem",
       },
       fontSize: {
-        "1.9": '1.9rem',
-        "2.4": '2.4rem',
+        "1.9": "1.9rem",
+        "2.4": "2.4rem",
         "3.2": "3.2rem",
         "3.6": "3.6rem",
         "4": "4rem",
+        "5": "5rem",
         "5.4": "5.4rem",
         "6": "6rem",
-        "7.2": "7.2rem",
+        "6.5": "6.5rem",
         "9": "9rem",
         "10": "10rem",
         "12": "12rem",
         "16": "16rem",
-        "20": '20rem',
+        "20": "20rem",
       },
-      letterSpacing: {
-
+      borderWidth: {
+        "base": ".4rem"
       }
     },
   },

@@ -19,9 +19,9 @@ body {
   color: white;
 }
 
-nav {
-  /* font-size: 2.4rem; */
-}
+/* nav {
+  font-size: 2.4rem;
+} */
 
 .navLink:after {
   content: "";
@@ -56,12 +56,16 @@ h1 {
   font-size: 3.2rem;
 } */
 
+h3 {
+  font-variation-settings: "wght" 800;
+}
+
 .name {
   /* font-size: 5.4rem; */
   letter-spacing: -.2rem;
   font-variation-settings: "wght" 800;
 }
 
-#about, #projects {
+#about, #projects, h2 {
   font-variation-settings: "wght" 800;
 }

@@ -29,14 +29,14 @@ export default function Header() {
   }
 
   return (
-    <nav className="fixed flex justify-between overflow-hidden top-0 w-full left-0 pb-0 pt-[4rem] px-[10rem]">
+    <nav className="fixed flex justify-between items-center overflow-hidden top-0 w-full left-0 pb-0 pt-12 sm:pt-16 px-20 sm:px-40">
       <div>
         {/* ajouter un logo + personnel */}
         <Cat />
       </div>
-      <div className="flex gap-[6rem]">
+      <div className="flex gap-4 sm:gap-24">
         {navLink.map((item, index) => (
-          <Link key={index} href={item.link} className={`navLink relative overflow-hidden p-3 ${getBgColor(item.link)}`}>
+          <Link key={index} href={item.link} className={`navLink relative overflow-hidden text-1.9 sm:text-2.4 p-3 ${getBgColor(item.link)}`}>
             {getUpOne(item.name)}
           </Link>
         ))}

@@ -1,4 +1,4 @@
-import Block from "@/components/block";
+import LayoutBlock from "@/components/Layout.block";
 import Layout from "@/components/Layout/Layout";
 import CardCompetences from "@/components/Projet/Card.competences";
 import Link from "next/link";
@@ -17,14 +17,14 @@ export default function Home() {
         </h1>
       </div>
 
-      <Block id="about" title="à propos">
+      <LayoutBlock id="about" title="à propos">
         <p className="text-center text-xl xl:text-6xl font-extrabold">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse neque,
           alias accusantium nihil quia accusamus dolorem officia.
         </p>
-      </Block>
+      </LayoutBlock>
 
-      <Block id="projects" title="mes projets">
+      <LayoutBlock id="projects" title="mes projets">
         <ul className="text-center text-2xl xl:text-7xl uppercase font-extrabold">
           {projects.map((project, index) => (
             <li key={index}>
@@ -37,15 +37,15 @@ export default function Home() {
             </li>
           ))}
         </ul>
-      </Block>
+      </LayoutBlock>
 
-      <Block id="competences" title="compétences">
+      <LayoutBlock id="competences" title="compétences">
         <div className="flex justify-center gap-4 sm:gap-12 flex-wrap">
           <CardCompetences />
         </div>
-      </Block>
+      </LayoutBlock>
 
-      <Block id="contact" title="contact">
+      <LayoutBlock id="contact" title="contact">
         <div className="flex flex-col">
           <Link
             href="mailto:gwenaelgueho@gmail.com"
@@ -57,7 +57,7 @@ export default function Home() {
             (+33) 7 87 08 53 94
           </Link>
         </div>
-      </Block>
+      </LayoutBlock>
     </Layout>
   );
 }

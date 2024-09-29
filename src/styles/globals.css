@@ -5,23 +5,19 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   background: #0e7017;
-  color: #918f8f;
+  color: #bebaba;
   font-family: Bricolage Grotesque, Arial;
   line-height: 1;
   margin: 0;
   padding: 0;
   height: 100%;
   overflow-y: auto;
-  color: white;
 }
-
-/* nav {
-  font-size: 2.4rem;
-} */
 
 .navLink:after {
   content: "";
@@ -37,35 +33,6 @@ body {
   transform: translateY(0);
 }
 
-.bgVert {
-  background-color: #00ff00;
-  border-radius: 1rem;
-}
-
 .navLink:hover:after {
   transform: translateY(-100%);
-}
-
-h1 {
-  /* font-size: 20rem; */
-  line-height: .75;
-  font-variation-settings: "wght" 800;
-}
-
-/* h2 {
-  font-size: 3.2rem;
-} */
-
-h3 {
-  font-variation-settings: "wght" 800;
-}
-
-.name {
-  /* font-size: 5.4rem; */
-  letter-spacing: -.2rem;
-  font-variation-settings: "wght" 800;
-}
-
-#about, #projects, h2 {
-  font-variation-settings: "wght" 800;
 }

@@ -20,7 +20,7 @@ export default function Layout({ children, title }: LayoutProps) {
         />
       </Head>
       <Header />
-      <main className="px-5 sm:px-10 lg:px-40 max-w-[144rem] m-auto">{children}</main>
+      <main className="px-16 md:px-20 xl:px-40 max-w-[144rem] m-auto">{children}</main>
     </>
   );
 }

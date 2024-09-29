@@ -8,7 +8,7 @@ export default function Projet() {
   return (
     <Layout title="projet">
       <div className="py-80">
-        <h1 className="text-3.6 sm:text-5.4">{name}</h1>
+        <h1 className="text-lg sm:text-3xl">{name}</h1>
       </div>
     </Layout>
   );

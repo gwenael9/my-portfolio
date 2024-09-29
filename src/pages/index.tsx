@@ -1,47 +1,31 @@
+import Block from "@/components/block";
 import Layout from "@/components/Layout/Layout";
-import CardProjet from "@/components/Projet/Card.projet";
-import { ArrowDownRight } from "lucide-react";
+import CardCompetences from "@/components/Projet/Card.competences";
 import Link from "next/link";
 
 export default function Home() {
   const projects = ["arsenalgoal", "hygichecker"];
 
-  const competences = [
-    {
-      title: "frontend",
-      content: ["react", "next.js", "vue.js", "tailwind", "typescript"],
-    },
-    {
-      title: "backend",
-      content: ["java", "node.js", "express.js", "graphQL", "typeORM"],
-    },
-    { title: "workflow", content: ["docker", "git", "CI/CD"] },
-  ];
-
   return (
     <Layout title="Accueil">
-      <div className="py-80">
-        <p className="name text-primary text-3.6 xl:text-5.4">Gwenaël Guého</p>
-        <h1 className="uppercase font-bold text-6.5 md:text-10 lg:text-12 xl:text-20 tracking-tight xl:tracking-normal">
+      <div className="pt-60 pb-40 sm:py-80">
+        <p className="tracking-neg-2 text-primary text-lg xl:text-3xl font-extrabold">
+          Gwenaël Guého
+        </p>
+        <h1 className="uppercase font-extrabold text-4xl sm:text-7xl lg:text-8xl xl:text-9xl tracking-tight xl:tracking-normal leading-.75">
           developer fullstack portfolio
         </h1>
       </div>
 
-      <div id="about" className="xl:pt-32 pb-40 xl:pb-80">
-        <h2 className="mb-20 xl:mb-40 flex gap-2 text-2.4 xl:text-3.2">
-          à propos <ArrowDownRight size={34} />
-        </h2>
-        <p className="text-center text-4 xl:text-9">
+      <Block id="about" title="à propos">
+        <p className="text-center text-xl xl:text-6xl font-extrabold">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse neque,
           alias accusantium nihil quia accusamus dolorem officia.
         </p>
-      </div>
+      </Block>
 
-      <div id="projects" className="xl:pt-32 pb-40 xl:pb-80">
-        <h2 className="mb-20 xl:mb-40 flex gap-2 text-2.4 xl:text-3.2">
-          mes projets <ArrowDownRight size={34} />
-        </h2>
-        <ul className="text-center text-5 xl:text-12 uppercase">
+      <Block id="projects" title="mes projets">
+        <ul className="text-center text-2xl xl:text-7xl uppercase font-extrabold">
           {projects.map((project, index) => (
             <li key={index}>
               <Link
@@ -53,18 +37,27 @@ export default function Home() {
             </li>
           ))}
         </ul>
-      </div>
+      </Block>
 
-      <div id="competences" className="xl:pt-32 pb-40 xl:pb-80">
-        <h2 className="mb-20 xl:mb-40 flex gap-2 text-2.4 xl:text-3.2">
-          compétences <ArrowDownRight size={34} />
-        </h2>
+      <Block id="competences" title="compétences">
         <div className="flex justify-center gap-4 sm:gap-12 flex-wrap">
-          {competences.map((competence, index) => (
-            <CardProjet key={index} competence={competence} />
-          ))}
+          <CardCompetences />
         </div>
-      </div>
+      </Block>
+
+      <Block id="contact" title="contact">
+        <div className="flex flex-col">
+          <Link
+            href="mailto:gwenaelgueho@gmail.com"
+            className="text-sm lg:text-5xl mb-4 text-primary hover:text-white transition-colors duration-1000"
+          >
+            gwenaelgueho@gmail.com
+          </Link>
+          <Link href="tel:+33787085394" className="text-xl">
+            (+33) 7 87 08 53 94
+          </Link>
+        </div>
+      </Block>
     </Layout>
   );
 }

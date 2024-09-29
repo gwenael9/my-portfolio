@@ -52,23 +52,28 @@ const config: Config = {
         sm: "0.25rem",
       },
       fontSize: {
-        "1.9": "1.9rem",
-        "2.4": "2.4rem",
-        "3.2": "3.2rem",
-        "3.6": "3.6rem",
-        "4": "4rem",
-        "5": "5rem",
-        "5.4": "5.4rem",
-        "6": "6rem",
-        "6.5": "6.5rem",
-        "9": "9rem",
-        "10": "10rem",
-        "12": "12rem",
-        "16": "16rem",
-        "20": "20rem",
+        xs: "1.9rem",
+        sm: "2.4rem",
+        base: "3.2rem",
+        lg: "3.6rem",
+        xl: "4rem",
+        "2xl": "5rem",
+        "3xl": "5.4rem",
+        "4xl": "6.5rem",
+        "5xl": "8rem",
+        "6xl": "9rem",
+        "7xl": "12rem",
+        "8xl": "16rem",
+        "9xl": "20rem",
       },
       borderWidth: {
         "base": ".4rem"
+      }, 
+      letterSpacing: {
+        "neg-2": '-0.2rem'
+      }, 
+      lineHeight: {
+        ".75": ".75"
       }
     },
   },

@@ -2,6 +2,7 @@ import LayoutBlock from "@/components/Layout.block";
 import Layout from "@/components/Layout/Layout";
 import Loader from "@/components/Loader";
 import CardCompetences from "@/components/Projet/Card.competences";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -14,20 +15,32 @@ export default function Home() {
     setLoading(false);
   };
 
+  // effet par la gauche
+  const fadeInFromLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   if (loading) {
     return <Loader onLoadComplete={handleLoadCompleted} />;
   }
 
   return (
     <Layout title="Accueil">
-      <div className="pt-60 pb-40 sm:py-80">
+      <motion.div
+        className="pt-60 pb-40 sm:py-80"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInFromLeft}
+        transition={{ duration: 0.5 }}
+      >
         <p className="tracking-neg-2 text-primary text-lg xl:text-3xl font-extrabold">
           Gwenaël Guého
         </p>
         <h1 className="uppercase font-extrabold text-4xl sm:text-7xl lg:text-8xl xl:text-9xl tracking-tight xl:tracking-normal leading-.75">
           developer fullstack portfolio
         </h1>
-      </div>
+      </motion.div>
 
       <LayoutBlock id="about" title="à propos">
         <p className="text-center text-xl xl:text-6xl font-extrabold">

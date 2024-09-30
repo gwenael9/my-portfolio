@@ -55,7 +55,7 @@ export default function Home() {
             <li key={index}>
               <Link
                 href={`/${project}`}
-                className="hover:text-primary transition-colors duration-500"
+                className="hover:text-primary transition-all duration-700 ease-in-out hover:font-medium"
               >
                 {project}
               </Link>

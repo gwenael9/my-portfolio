@@ -10,7 +10,7 @@ html {
 
 body {
   background: #0e7017;
-  color: #c7c6c6;
+  color: #ffffff;
   font-family: Bricolage Grotesque, Arial;
   line-height: 1;
   margin: 0;
@@ -32,6 +32,8 @@ body {
   transition: transform .15s ease-out;
   transform: translateY(0);
 }
+
+/* LOADER */
 
 .navLink:hover:after {
   transform: translateY(-100%);

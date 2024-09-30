@@ -10,7 +10,7 @@ html {
 
 body {
   background: #0e7017;
-  color: #bebaba;
+  color: #c7c6c6;
   font-family: Bricolage Grotesque, Arial;
   line-height: 1;
   margin: 0;
@@ -35,4 +35,17 @@ body {
 
 .navLink:hover:after {
   transform: translateY(-100%);
+}
+
+@keyframes shrink {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-shrink {
+  animation: shrink 1s ease-in-out infinite alternate;
 }

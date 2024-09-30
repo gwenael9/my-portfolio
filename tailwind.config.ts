@@ -74,7 +74,7 @@ const config: Config = {
       }, 
       lineHeight: {
         ".75": ".75"
-      }
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

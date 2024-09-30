@@ -1,10 +1,22 @@
 import LayoutBlock from "@/components/Layout.block";
 import Layout from "@/components/Layout/Layout";
+import Loader from "@/components/Loader";
 import CardCompetences from "@/components/Projet/Card.competences";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
   const projects = ["arsenalgoal", "hygichecker"];
+
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadCompleted = () => {
+    setLoading(false);
+  };
+
+  if (loading) {
+    return <Loader onLoadComplete={handleLoadCompleted} />;
+  }
 
   return (
     <Layout title="Accueil">

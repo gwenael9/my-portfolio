@@ -65,7 +65,7 @@ const config: Config = {
         "6xl": "9rem",
         "7xl": "12rem",
         "8xl": "16rem",
-        "9xl": "20rem",
+        "9xl": "18rem",
       },
       borderWidth: {
         "base": ".4rem"

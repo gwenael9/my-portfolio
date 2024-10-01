@@ -43,14 +43,14 @@ export default function Home() {
       </motion.div>
 
       <LayoutBlock id="about" title="à propos" >
-        <p className="text-center text-xl xl:text-6xl font-extrabold">
+        <p className="text-center text-xl md:text-3xl xl:text-5xl font-extrabold">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse neque,
           alias accusantium nihil quia accusamus dolorem officia.
         </p>
       </LayoutBlock>
 
       <LayoutBlock id="projects" title="mes projets">
-        <ul className="text-center text-2xl xl:text-7xl uppercase font-extrabold">
+        <ul className="text-center text-2xl md:text-3xl xl:text-7xl uppercase font-extrabold">
           {projects.map((project, index) => (
             <li key={index}>
               <Link

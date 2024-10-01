@@ -26,7 +26,7 @@ export default function Projet() {
     <Layout title={getUpOne(name.toString())}>
       <div className="pb-40">
         <div className="flex items-start justify-between flex-wrap mb-40 uppercase">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-neg-2">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-neg-2">
             {name}
           </h1>
           <Link

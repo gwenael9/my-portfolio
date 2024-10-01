@@ -2,13 +2,12 @@ import LayoutBlock from "@/components/Layout.block";
 import Layout from "@/components/Layout/Layout";
 import Loader from "@/components/Loader";
 import CardCompetences from "@/components/Projet/Card.competences";
+import { projects } from "@/utils/projects";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
-  const projects = ["arsenalgoal", "hygichecker"];
-
   const [loading, setLoading] = useState(true);
 
   const handleLoadCompleted = () => {
@@ -42,7 +41,7 @@ export default function Home() {
         </h1>
       </motion.div>
 
-      <LayoutBlock id="about" title="à propos">
+      <LayoutBlock id="about" title="à propos" >
         <p className="text-center text-xl xl:text-6xl font-extrabold">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse neque,
           alias accusantium nihil quia accusamus dolorem officia.

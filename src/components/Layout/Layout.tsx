@@ -1,6 +1,9 @@
 import Head from "next/head";
 import { ReactNode } from "react";
 import Header from "./Header";
+import React from "react";
+import { useRouter } from "next/router";
+import HeaderProject from "./HeaderProject";
 
 export interface LayoutProps {
   children: ReactNode;
@@ -8,6 +11,11 @@ export interface LayoutProps {
 }
 
 export default function Layout({ children, title }: LayoutProps) {
+  const router = useRouter();
+
+  // si on est sur l'accueil
+  const home = router.pathname == "/";
+
   return (
     <>
       <Head>
@@ -19,8 +27,10 @@ export default function Layout({ children, title }: LayoutProps) {
           rel="stylesheet"
         />
       </Head>
-      <Header />
-      <main className="px-16 md:px-20 xl:px-40 max-w-[144rem] m-auto">{children}</main>
+      {home ? <Header /> : <HeaderProject />}
+      <main className="px-16 md:px-20 xl:px-40 max-w-[144rem] m-auto">
+        {children}
+      </main>
     </>
   );
 }

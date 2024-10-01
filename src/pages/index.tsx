@@ -1,4 +1,5 @@
 import LayoutBlock from "@/components/Layout.block";
+import Footer from "@/components/Layout/Footer";
 import Layout from "@/components/Layout/Layout";
 import Loader from "@/components/Loader";
 import CardCompetences from "@/components/Projet/Card.competences";
@@ -82,6 +83,7 @@ export default function Home() {
           </Link>
         </div>
       </LayoutBlock>
+      <Footer />
     </Layout>
   );
 }

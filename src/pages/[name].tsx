@@ -1,3 +1,4 @@
+import Footer from "@/components/Layout/Footer";
 import Layout from "@/components/Layout/Layout";
 import { getUpOne } from "@/utils/function";
 import { projects } from "@/utils/projects";
@@ -58,6 +59,7 @@ export default function Projet() {
           </div>
         </div>
       </div>
+      <Footer />
     </Layout>
   );
 }

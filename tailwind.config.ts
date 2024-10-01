@@ -47,6 +47,7 @@ const config: Config = {
       },
       borderRadius: {
         card: "1.6rem",
+        footer: "3.5rem",
         lg: "0.5rem",
         md: "0.375rem",
         sm: "0.25rem",

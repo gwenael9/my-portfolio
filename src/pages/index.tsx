@@ -52,22 +52,38 @@ export default function Home() {
         </h1>
       </motion.div>
 
-      <LayoutBlock id="about" title="à propos" >
+      <LayoutBlock id="about" title="à propos">
         <p className="text-center text-base md:text-3xl xl:text-5xl font-extrabold">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse neque,
-          alias accusantium nihil quia accusamus dolorem officia.
+          Actuellement en alternance développeur fullstack avec
+          l&apos;entreprise{" "}
+          <Link
+            className="hover:text-primary transition-all duration-700 ease-in-out"
+            href="https://www.facyle.com/"
+            target="_blank"
+          >
+            Facyle
+          </Link>{" "}
+          et l&apos;école{" "}
+          <Link
+            className="hover:text-primary transition-all duration-700 ease-in-out"
+            href="https://www.efrei.fr/"
+            target="_blank"
+          >
+            Efrei
+          </Link>{" "}
+          sur Bordeaux.
         </p>
       </LayoutBlock>
 
-      <LayoutBlock id="projects" title="mes projets">
+      <LayoutBlock id="projects" title="projets">
         <ul className="text-center text-xl sm:text-2xl md:text-4xl xl:text-7xl uppercase font-extrabold">
           {projects.map((project, index) => (
             <li key={index}>
               <Link
-                href={`/${project}`}
+                href={`/${project.name}`}
                 className="hover:text-primary transition-all duration-700 ease-in-out hover:font-medium"
               >
-                {project}
+                {project.name}
               </Link>
             </li>
           ))}
@@ -84,7 +100,7 @@ export default function Home() {
         <div className="flex flex-col">
           <Link
             href="mailto:gwenaelgueho@gmail.com"
-            className="text-sm lg:text-5xl mb-4 text-primary hover:text-white transition-colors duration-1000"
+            className="text-sm sm:text-xl lg:text-5xl mb-4 text-primary hover:text-white transition-colors duration-1000"
           >
             gwenaelgueho@gmail.com
           </Link>

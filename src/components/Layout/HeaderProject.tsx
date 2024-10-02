@@ -5,7 +5,7 @@ export default function HeaderProject() {
   const router = useRouter();
 
   return (
-    <header className="h-40 flex px-16 md:px-20 xl:px-40">
+    <header className="h-40 flex px-8 sm:px-16 md:px-20">
       <div className="flex items-center">
         <button
           onClick={() => router.push("/")}

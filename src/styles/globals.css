@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background: #0e7017;
+  background: #021526;
   color: #ffffff;
   font-family: Bricolage Grotesque, Arial;
   line-height: 1;
@@ -28,7 +28,7 @@ body {
   height: 100%;
   border-radius: 1rem;
   z-index: -1;
-  background: #00ff00;
+  background: #6EACDA;
   transition: transform .15s ease-out;
   transform: translateY(0);
 }
@@ -50,4 +50,15 @@ body {
 
 .animate-shrink {
   animation: shrink 1s ease-in-out infinite alternate;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6EACDA;
+  border-radius: 10px;
 }

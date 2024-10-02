@@ -1,13 +1,5 @@
-interface LoaderProps {
-    onLoadComplete: () => void;
-}
-
-export default function Loader({ onLoadComplete}: LoaderProps) {
+export default function Loader() {
   const times = ["0.1s", "0.2s"];
-
-  setTimeout(() => (
-    onLoadComplete()
-  ), 2000)
 
   return (
     <div className="flex justify-center items-center h-screen">

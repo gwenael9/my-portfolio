@@ -28,7 +28,7 @@ export default function Layout({ children, title }: LayoutProps) {
         />
       </Head>
       {home ? <Header /> : <HeaderProject />}
-      <main className="px-16 md:px-20 xl:px-40 max-w-[144rem] m-auto">
+      <main className="px-8 sm:px-16 md:px-20 xl:px-40 max-w-[144rem] m-auto">
         {children}
       </main>
     </>

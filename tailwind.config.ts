@@ -55,6 +55,7 @@ const config: Config = {
       fontSize: {
         xs: "1.9rem",
         sm: "2.4rem",
+        md: "2.8rem",
         base: "3.2rem",
         lg: "3.6rem",
         xl: "4rem",
@@ -63,7 +64,7 @@ const config: Config = {
         "4xl": "6.5rem",
         "5xl": "8rem",
         "6xl": "9rem",
-        "7xl": "12rem",
+        "7xl": "11rem",
         "8xl": "16rem",
         "9xl": "18rem",
       },

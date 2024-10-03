@@ -1,39 +1,18 @@
 import LayoutBlock from "@/components/Layout.block";
 import Footer from "@/components/Layout/Footer";
 import Layout from "@/components/Layout/Layout";
-import Loader from "@/components/Loader";
 import CardCompetences from "@/components/Projet/Card.competences";
 import { projects } from "@/utils/projects";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import React from "react";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const handleLoadCompleted = () => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-    };
-    if (document.readyState === "complete") {
-      handleLoadCompleted();
-    } else {
-      window.addEventListener("load", handleLoadCompleted);
-      return () => window.removeEventListener("load", handleLoadCompleted);
-    }
-  }, []);
-
   // effet par la gauche
   const fadeInFromLeft = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
   };
-
-  if (loading) {
-    return <Loader />;
-  }
 
   return (
     <Layout title="Accueil">

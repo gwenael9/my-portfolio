@@ -1,9 +1,10 @@
 import Head from "next/head";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Header from "./Header";
-import React from "react";
-import { useRouter } from "next/router";
 import HeaderProject from "./HeaderProject";
+import { useRouter } from "next/router";
+import Loader from "../Loader";
+import React from "react";
 
 export interface LayoutProps {
   children: ReactNode;
@@ -12,9 +13,30 @@ export interface LayoutProps {
 
 export default function Layout({ children, title }: LayoutProps) {
   const router = useRouter();
+  const [loading, setLoading] = useState(true);
 
   // si on est sur l'accueil
-  const home = router.pathname == "/";
+  const home = router.pathname === "/";
+
+  useEffect(() => {
+    const handleLoadCompleted = () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    };
+
+    if (home) {
+      // loader uniquement sur la page d'accueil
+      if (document.readyState === "complete") {
+        handleLoadCompleted();
+      } else {
+        window.addEventListener("load", handleLoadCompleted);
+        return () => window.removeEventListener("load", handleLoadCompleted);
+      }
+    } else {
+      setLoading(false);
+    }
+  }, [home]);
 
   return (
     <>
@@ -66,10 +88,16 @@ export default function Layout({ children, title }: LayoutProps) {
           rel="stylesheet"
         />
       </Head>
-      {home ? <Header /> : <HeaderProject />}
-      <main className="px-8 sm:px-16 md:px-20 xl:px-40 max-w-[144rem] m-auto">
-        {children}
-      </main>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          {home ? <Header /> : <HeaderProject />}
+          <main className="px-8 sm:px-16 md:px-20 xl:px-40 max-w-[144rem] m-auto">
+            {children}
+          </main>
+        </>
+      )}
     </>
   );
 }

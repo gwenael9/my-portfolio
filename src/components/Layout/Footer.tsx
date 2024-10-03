@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="mb-24">
-      <div className="p-12 sm:p-24 bg-primary rounded-footer flex flex-col gap-8">
+      <div className="p-12 sm:p-24 bg-primary text-secondary rounded-footer flex flex-col gap-8">
         <div className="flex justify-between items-center">
           <p className="text-xs sm:text-sm lg:text-lg font-semibold">Tous droit réservés © 2024</p>
           <div className="flex gap-8">

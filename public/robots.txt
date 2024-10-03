@@ -1,0 +1,7 @@
+User-agent: *
+# Bloque l'accès aux répertoires privés
+Disallow: /private/
+Disallow: /temp/
+Allow: /public/
+
+Sitemap: https://www.gwenaelgueho.com/sitemap.xml

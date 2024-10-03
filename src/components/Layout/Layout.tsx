@@ -35,7 +35,7 @@ export default function Layout({ children, title }: LayoutProps) {
           property="og:description"
           content="Découvrez mon portfolio et mes projets en tant que développeur fullstack."
         />
-        <meta property="og:image" content="/portfolio.png" />
+        <meta property="og:image" content="/images/portfolio.png" />
         <meta property="og:url" content="https://www.gwenaelgueho.com/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -47,7 +47,7 @@ export default function Layout({ children, title }: LayoutProps) {
           name="twitter:description"
           content="Découvrez mon portfolio et mes projets en tant que développeur fullstack."
         />
-        <meta name="twitter:image" content="/portfolio.png" />
+        <meta name="twitter:image" content="/images/portfolio.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
         <meta name="robots" content="index, follow" />

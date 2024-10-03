@@ -16,7 +16,7 @@ export default function Footer() {
             {icons.map((icon, index) => (
               <Link href={icon.link} target="_blank" key={index}>
                 <Image
-                  src={`/${icon.name}.svg`}
+                  src={`/images/${icon.name}.svg`}
                   alt={`icon de ${icon.name}`}
                   width={28}
                   height={0}

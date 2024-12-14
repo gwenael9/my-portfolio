@@ -33,16 +33,16 @@ export default function Projet() {
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-neg-2">
             {name}
           </h1>
-          <Link
-            className="relative flex items-center gap-2 text-sm group transition-all duration-700 hover:text-primary"
-            href={project.link}
-            target="_blank"
-          >
-            voir <ArrowUpRight size={30} />
-            <span
-              className="absolute left-0 bottom-0 w-0 h-1 bg-primary transition-all duration-700 group-hover:w-full"
-            ></span>
-          </Link>
+          {project.link !== "" && (
+            <Link
+              className="relative flex items-center gap-2 text-sm group transition-all duration-700 hover:text-primary"
+              href={project.link}
+              target="_blank"
+            >
+              voir <ArrowUpRight size={30} />
+              <span className="absolute left-0 bottom-0 w-0 h-1 bg-primary transition-all duration-700 group-hover:w-full"></span>
+            </Link>
+          )}
         </div>
         <div className="flex flex-col sm:flex-row gap-32">
           <div className="flex flex-col gap-20 sm:w-1/2">
@@ -56,6 +56,13 @@ export default function Projet() {
               technos
             </h2>
             <div className="text-xs">{project.technos}</div>
+            <Link
+              href={project.github}
+              target="_blank"
+              className="text-primary uppercase text-sm font-bold flex items-center"
+            >
+              Github <ArrowUpRight size={30} />
+            </Link>
           </div>
         </div>
       </div>

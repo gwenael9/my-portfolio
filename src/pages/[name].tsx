@@ -1,7 +1,7 @@
 import Footer from "@/components/Layout/Footer";
 import Layout from "@/components/Layout/Layout";
 import { getUpOne } from "@/utils/function";
-import { Project, projects } from "@/utils/projects";
+import { projects } from "@/utils/projects";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -10,9 +10,7 @@ export default function Projet() {
   const router = useRouter();
   const { name } = router.query;
 
-  const project: Project | undefined = projects.find(
-    (project) => project?.name === name
-  );
+  const project = projects.find((project) => project?.name === name);
 
   if (!project) {
     return (

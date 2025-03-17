@@ -13,11 +13,11 @@ const competences: Competence[] = [
   },
   {
     title: "backend",
-    content: ["java", "node.js", "express.js", "graphQL", "typeORM"],
+    content: ["java", "node.js", "nest.js", "express.js", "graphQL", "typeORM"],
   },
   {
     title: "workflow",
-    content: ["docker", "git", "CI/CD"],
+    content: ["docker", "kubernetes", "git", "CI/CD"],
   },
 ];
 

@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <nav className="fixed flex justify-between items-center overflow-hidden top-0 w-full left-0 pb-0 pt-12 sm:pt-16 px-8 sm:px-16 md:px-20 z-10">
       <div>
-        {/* ajouter un logo + personnel */}
+        {/* TODO: ajouter un logo + personnel */}
         <Cat />
       </div>
       <div className="flex gap-4 sm:gap-24">
